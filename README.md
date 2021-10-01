@@ -22,3 +22,10 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+Rails Console 
+
+Create Cities 
+examples barranquilla = Location.new(city: "Barranquilla")
+
+Create Job positions
+examples ItSupport = Job.new(position: "It Support")
