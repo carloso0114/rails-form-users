@@ -1,5 +1,8 @@
 class MainController < ApplicationController
   before_action :authenticate_admin!
-  def home
+
+  def index
+    @employee = Employee.all
   end
+
 end
