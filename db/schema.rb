@@ -27,10 +27,12 @@ ActiveRecord::Schema.define(version: 2021_10_01_164004) do
   create_table "employees", force: :cascade do |t|
     t.string "name"
     t.string "lastName"
-    t.string "location"
-    t.string "job"
+    t.integer "job_id"
+    t.integer "location_id"
     t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "updated_Sat", precision: 6, null: false
+    t.index ["job_id"], name: "index_employees_on_job_id"
+    t.index ["location_id"], name: "index_employees_on_location_id"
   end
 
   create_table "jobs", force: :cascade do |t|

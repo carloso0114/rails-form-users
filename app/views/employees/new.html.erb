@@ -1,7 +1,7 @@
 <%= simple_form_for @employee do |f| %>
   <%= f.input :name, label: 'Frist name'  %>
   <%= f.input :lastName, label: 'Last name' %>
-  <%= f.input :location %>
-  <%= f.input :job %>
+  <%= f.association :location, label_method: :city%>
+  <%= f.association :job, label_method: :position %>
   <%= f.button :submit %>
 <% end %>
