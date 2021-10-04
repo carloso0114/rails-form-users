@@ -2,8 +2,6 @@ class EmployeesController < ApplicationController
   before_action :authenticate_admin!
     def index
         @employees = Employee.all
-        @locations = Location.all
-        @jobs = Job.all
     end
     
     def show
@@ -28,6 +26,6 @@ class EmployeesController < ApplicationController
     
   private
     def employee_params
-      params.require(:employee).permit(:name, :lastName)
+      params.require(:employee).permit(:name, :lastName, :location_id, :job_id)
     end
 end
