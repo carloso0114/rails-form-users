@@ -1,9 +1,29 @@
 <h1>Employees</h1>
 
-<ul>
-  <% @employees.each do |employee| %>
-    <li>
-      <%= link_to employee.name, employee %>
-    </li>
+<%= search_form_for @q do |f| %>
+  <%= f.label :name_cont %>
+  <%= f.search_field :name_cont %>
+
+  <%= f.submit %>
+<% end %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Last name</th>
+      <th scope="col">Location</th>
+      <th scope="col">Job</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employees.each do |employee| %>
+    <tr>
+    <td><%= link_to employee.name, employee %></td>
+    <td><%= employee.lastName %></td>
+    <td><%= employee.location.city %></td>
+    <td><%= employee.job.position %></td>
+    </tr>
   <% end %>
-</ul>
+  </tbody>
+</table>
