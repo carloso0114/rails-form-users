@@ -3,5 +3,5 @@
   <%= f.input :lastName, label: 'Last name' %>
   <%= f.association :location, label_method: :city%>
   <%= f.association :job, label_method: :position %>
-  <%= f.button :submit %>
+  <%= f.button :submit, class: "btn btn-primary mt-4" %>
 <% end %>
