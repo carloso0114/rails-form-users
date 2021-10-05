@@ -1,27 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby version
 
-* System dependencies
+3.0.2
 
-* Configuration
+* Rails Version
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+6.1.4.1
 
 * Deployment instructions
 
-* ...
+Run bundle install
+
+yarn install --check-files
+
+Rails db:migrate
+
 Rails Console 
 
 Create Cities 
@@ -29,3 +23,8 @@ examples barranquilla = Location.new(city: "Barranquilla")
 
 Create Job positions
 examples ItSupport = Job.new(position: "It Support")
+
+* Usage
+
+1. Run rails server
+2. Open your browser on http://localhost:3000/
